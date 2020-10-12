@@ -60,7 +60,7 @@ public class CurrencyExchange extends javax.swing.JFrame {
 
         etiqueta_cambio.setFont(new java.awt.Font("Tahoma", 3, 10)); // NOI18N
         etiqueta_cambio.setForeground(new java.awt.Color(0, 255, 255));
-        etiqueta_cambio.setText("Change:");
+        etiqueta_cambio.setText("Exchange rate:");
 
         botonaceptar.setBackground(new java.awt.Color(0, 255, 255));
         botonaceptar.setText("Send");
@@ -87,10 +87,10 @@ public class CurrencyExchange extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(99, 99, 99)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(etiqueta_cantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(etiqueta_cantidad, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
                             .addComponent(etiqueta_moneda)
-                            .addComponent(etiqueta_cambio, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(etiqueta_cambio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(35, 35, 35)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -168,10 +168,10 @@ public class CurrencyExchange extends javax.swing.JFrame {
 
             if(grupo_botones.getSelection().equals(dolaraeuro.getModel())) {
                 resultado = cantidad * cambio;
-                JOptionPane.showMessageDialog(null, "The exchange rate is: " + String.format("%.2f", resultado) + " €");
+                JOptionPane.showMessageDialog(null, "The conversion is: " + String.format("%.2f", resultado) + " €");
             }else{
                 resultado = cantidad * cambio;
-                JOptionPane.showMessageDialog(null, "The exchange rate is: " + String.format("%.2f", resultado) + " $");
+                JOptionPane.showMessageDialog(null, "The conversion is: " + String.format("%.2f", resultado) + " $");
             }  
         }
         texto_cantidad.setText("");
